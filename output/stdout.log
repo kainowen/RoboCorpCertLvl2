@@ -1,0 +1,55 @@
+
+Collecting tasks from: tasks.py
+=================== Running: [96morder_robots_from_RobotSpareBin[0m ===================
+1 1 2 3 Address 123
+[96morder_robots_from_RobotSpareBin[0m status: [91mFAIL
+[0m[91m
+DOMException: Failed to execute 'querySelectorAll' on 'Document': 'input:placeholder(Enter the part number for the legs)' is not a valid selector.
+    at query (<anonymous>:3352:41)
+    at <anonymous>:3362:7
+    at SelectorEvaluatorImpl._cached (<anonymous>:3139:20)
+    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3349:17)
+    at SelectorEvaluatorImpl._querySimple (<anonymous>:3229:19)
+    at <anonymous>:3177:29
+    at SelectorEvaluatorImpl._cached (<anonymous>:3139:20)
+    at SelectorEvaluatorImpl.query (<anonymous>:3170:19)
+    at Object.query (<anonymous>:3384:44)
+    at <anonymous>:3342:21
+[0m=========== Full Traceback (running [96morder_robots_from_RobotSpareBin[0m) ===========
+[91mTraceback (most recent call last):
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\robocorp\tasks\_commands.py", line 440, in run
+    result = task.run(*args, **kwargs)
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\robocorp\tasks\_task.py", line 89, in run
+    return self.method(*args, **kwargs)
+  File "c:\Users\User\Documents\Python\RoboCorpCertLvl2\tasks.py", line 64, in order_robots_from_RobotSpareBin
+    fill_the_form(order["Order number"],order["Head"],order["Body"],order["Legs"],order["Address"])
+  File "c:\Users\User\Documents\Python\RoboCorpCertLvl2\tasks.py", line 55, in fill_the_form
+    page.fill("input:placeholder(Enter the part number for the legs)",str(legs))
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\sync_api\_generated.py", line 9681, in fill
+    self._sync(
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_sync_base.py", line 113, in _sync
+    return task.result()
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_page.py", line 792, in fill
+    return await self._main_frame.fill(**locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_frame.py", line 527, in fill
+    await self._channel.send("fill", locals_to_params(locals()))
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_connection.py", line 509, in wrap_api_call
+    return await cb()
+  File "C:\ProgramData\robocorp\ht\109dad2_b1f3c24_691db988\lib\site-packages\playwright\_impl\_connection.py", line 97, in inner_send
+    result = next(iter(done)).result()
+playwright._impl._errors.Error: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'input:placeholder(Enter the part number for the legs)' is not a valid selector.
+    at query (<anonymous>:3352:41)
+    at <anonymous>:3362:7
+    at SelectorEvaluatorImpl._cached (<anonymous>:3139:20)
+    at SelectorEvaluatorImpl._queryCSS (<anonymous>:3349:17)
+    at SelectorEvaluatorImpl._querySimple (<anonymous>:3229:19)
+    at <anonymous>:3177:29
+    at SelectorEvaluatorImpl._cached (<anonymous>:3139:20)
+    at SelectorEvaluatorImpl.query (<anonymous>:3170:19)
+    at Object.query (<anonymous>:3384:44)
+    at <anonymous>:3342:21
+
+[0m================================================================================
+Robocorp Log (html): c:\Users\User\Documents\Python\RoboCorpCertLvl2\output\log.html
