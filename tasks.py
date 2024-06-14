@@ -7,7 +7,6 @@ from RPA.PDF import PDF
 from RPA.Archive import Archive
 
 
-
 @task
 def order_robots_from_RobotSpareBin():
     """
