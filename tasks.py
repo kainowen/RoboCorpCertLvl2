@@ -72,7 +72,6 @@ def order_robots_from_RobotSpareBin():
 
         while(page.locator("button#order").is_visible() and i > 0):
           #Loops through clicking submit while the submit button is visable in order to overcome submit error, maxumum retries defined by i above
-          print("Clicking Submit")
           page.click("button#order")
           i=i-1
 

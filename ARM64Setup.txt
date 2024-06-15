@@ -1,0 +1,18 @@
+#for setting up RoboCorp dev environment in a Rasperry Pi or other ARM64 CPU.
+
+#!/bin/bash
+
+#Creates Venv Environemt
+python3 -m venv venv
+
+#Activates environment
+source venv/bin/activate.bat
+
+#Installs packages
+pip install rpaframework
+pip install robocorp
+pip install robocorp-browser
+pip install robocorp-truststore
+
+#Defines "runtask" to run the bot, for current session only
+alias runtask="python -m robocorp.tasks run tasks.py"
